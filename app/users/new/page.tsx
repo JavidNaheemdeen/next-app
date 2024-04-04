@@ -1,8 +1,15 @@
-import React from 'react'
+'use client';
+import { useRouter } from 'next/navigation';
+import React, { useReducer } from 'react'
 
 const NewUserPage = () => {
+
+  const router = useRouter();
+
   return (
-    <div>NewUserPage</div>
+    <button className='btn btn-primary' onClick={() => router.push('/users')}>
+      Create
+    </button>
   )
 }
 
